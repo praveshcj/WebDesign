@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+
+<style>
+button.accordion {
+    background-color: #cdd0d6;
+    color: #444;
+    cursor: pointer;
+padding:15px;
+    width: 100%;
+    text-align: left;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #9fa1a3; 
+}
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+}
+html{
+height:100%;
+}
+body{
+background: linear-gradient(#307af2,#e3ebf7);
+
+}a:link {
+    color: White; 
+    background-color: #76ff57; 
+    text-decoration: none;
+}
+
+a:visited {
+    color: White;
+    background-color:#76ff57;
+}
+
+a:hover {
+    color: White;
+    background-color: #156A02;
+}
+
+a:active {
+    color: white;
+    background-color: #156A02;
+}
+
+ ul{
+           list-style-type: disc;
+           margin: 10px;
+           padding : 15px 20px;
+           border:10px;
+           }
+        li a {
+          display: list-item;
+          width : 100px;
+          background-color: #76ff57;
+          padding:15px 20 px;
+             }
+  </style>
+</head>
+<body>
+<div class="dropdown show">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Menu
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="homepage.html">My Introduction</a>
+    <a class="dropdown-item" href="academics.html">Academics</a>
+    <a class="dropdown-item" href="aboutme.html">About me</a>
+    <a class="dropdown-item" href="condet.html">Contact Details</a>
+  </div>
+</div>
+
+<h1 ><center> Introduction<center></h1>
+<p align=top style="font-family:Comic Sans MS;font-size:200%;"><img src="mypic.jpg" alt = "This was supposed to be my image" 
+style="float:left;width:200px;height:300px;"> 
+My name is Pravesh Jain. Yes the person in the image you see on the left hand side of this text. I am first year student of Department of Computer Science and Engineering,IIT Kharagpur.
+</p>
+<button class="accordion">To know more about my interests click here.</button>
+<div class="panel">
+  <p>I am a avid reader and a movie lover. If some day you want any suggestions regarding movies , believe me I am the guy to come to.</p>
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    }
+}
+</script>
+
+ </body>
+</html>
